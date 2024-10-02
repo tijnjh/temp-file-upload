@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temporary file upload</title>
+    <meta name="color-scheme" content="light dark" />
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <style>
+      body {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 1rem;
+        font-family: monospace;
+      }
+      #upload-zone {
+        width: 100%;
+        border: 1px solid gray;
+        height: 20rem;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+      }
+
+      .dz-button {
+        all: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>f.jns.gg</h1>
+    <p>a temporary file uploading service</p>
+    <br />
+    <div id="initial">
+      <form
+        action="/"
+        class="dropzone"
+        method="post"
+        enctype="multipart/form-data"
+        id="upload-zone"
+      ></form>
+    </div>
+    <div id="success" style="display: none">
+      <p>successfully uploaded file, download url: <span id="result"></span></p>
+    </div>
+    <br />
+    <p>files last 1 hour, max size: 1gb</p>
+    <script src="main.js"></script>
+  </body>
+</html>
